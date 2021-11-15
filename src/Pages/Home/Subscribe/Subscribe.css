@@ -1,0 +1,13 @@
+.subscribe h1,p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe {
+    padding-top: 20px;
+}
