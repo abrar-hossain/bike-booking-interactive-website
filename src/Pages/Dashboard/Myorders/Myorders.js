@@ -15,7 +15,7 @@ const Myorders = () => {
     const [myOrders, setMyOrders] = useState([]);
     useEffect(() => {
         axios
-            .get("http://localhost:5000/orders")
+            .get("https://blooming-refuge-31088.herokuapp.com/orders")
             .then((res) => {
                 const allOrders = res.data;
                 const order = allOrders.filter(order => order.email === user.email);
@@ -26,7 +26,7 @@ const Myorders = () => {
     const deleteOrder = (id) => {
         const proceed = window.confirm("Are you want to delete?");
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://blooming-refuge-31088.herokuapp.com/orders/${id}`;
             axios
                 .delete(url)
                 .then((res) => {

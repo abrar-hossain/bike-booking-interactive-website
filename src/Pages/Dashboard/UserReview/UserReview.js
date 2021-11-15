@@ -18,7 +18,7 @@ const UserReview = () => {
             rating_person_img: user.photoURL || reserveImg
         };
         console.log(newReviewData);
-        axios.post('http://localhost:5000/reviews', newReviewData)
+        axios.post('https://blooming-refuge-31088.herokuapp.com/reviews', newReviewData)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Your feedback has been sent');

@@ -14,6 +14,7 @@ import AuthProvider from './context/AuthProvider/AuthProvider';
 import Navbars from './Pages/Shared/Navbars/Navbars';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import Notfound from './Pages/Notfound/Notfound';
 function App() {
   return (
     <AuthProvider>
@@ -40,6 +41,9 @@ function App() {
           </Route>
           <Route path="/register">
             <Register></Register>
+          </Route>
+          <Route path="*">
+            <Notfound></Notfound>
           </Route>
         </Switch>
         <Footer></Footer>

@@ -10,14 +10,14 @@ const Purchase = () => {
     const { id } = useParams();
     const [motors, setMotors] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/motors/${id}`)
+        fetch(`https://blooming-refuge-31088.herokuapp.com/motors/${id}`)
             .then(res => res.json())
             .then(data => setMotors(data));
     }, []);
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://blooming-refuge-31088.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added successfully');

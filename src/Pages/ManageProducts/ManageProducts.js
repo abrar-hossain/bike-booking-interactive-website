@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 const ManageProducts = () => {
     const [allProducts, setAllProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/motors')
+        fetch('https://blooming-refuge-31088.herokuapp.com/motors')
             .then(res => res.json())
             .then(data => setAllProducts(data))
 
@@ -19,7 +19,7 @@ const ManageProducts = () => {
     const handleDeleteProduct = id => {
         const proceed = window.confirm('Are you sure to delete this product?');
         if (proceed) {
-            const url = `http://localhost:5000/motors/${id}`;
+            const url = `https://blooming-refuge-31088.herokuapp.com/motors/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
