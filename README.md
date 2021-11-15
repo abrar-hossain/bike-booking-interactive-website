@@ -5,8 +5,8 @@
 
 # Description: 
 
-. we are selling latest model.
-. free service for one year.
-. environment friendly.
-. All brand latest model bike.
-. We have installment process but have some condition for this option.
+1. we are selling latest model.
+2. free service for one year.
+3. environment friendly.
+4. All brand latest model bike.
+5. We have installment process but have some condition for this option.
