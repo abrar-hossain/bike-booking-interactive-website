@@ -63,7 +63,7 @@ const ManageAllOrders = () => {
                             <TableCell component="th" scope="row">
                                 {user.displayName}
                             </TableCell>
-                            <TableCell align="right">{order.title
+                            <TableCell align="right">{order.model
                             }</TableCell>
                             <TableCell align="right">{order.price}</TableCell>
                             {

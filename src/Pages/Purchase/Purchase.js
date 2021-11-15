@@ -17,7 +17,13 @@ const Purchase = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('https://blooming-refuge-31088.herokuapp.com/orders', data)
+        const newData = {
+            ...data,
+            model: motors.model,
+            price: motors.price
+
+        }
+        axios.post('https://blooming-refuge-31088.herokuapp.com/orders', newData)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added successfully');
@@ -46,14 +52,6 @@ const Purchase = () => {
                     <label>Your Email:</label>
                     <br />
                     <input {...register("email")} value={user.email} />
-                    <br />
-                    <label>Model:</label>
-                    <br />
-                    <input {...register("model")} value={motors.model} />
-                    <br />
-                    <label>Price:</label>
-                    <br />
-                    <input {...register("price")} value={motors.price} />
                     <br />
                     <label>Address:</label>
                     <br />
