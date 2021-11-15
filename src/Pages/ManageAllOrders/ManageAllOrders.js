@@ -13,15 +13,21 @@ import Button from '@mui/material/Button';
 const ManageAllOrders = () => {
     const { user } = useAuth();
     const [myOrders, setMyOrders] = useState([]);
+    /*  useEffect(() => { */
     useEffect(() => {
-        axios
+            fetch('https://blooming-refuge-31088.herokuapp.com/orders')
+                .then(res => res.json())
+                .then(data => setMyOrders(data))
+
+        }, []);
+        /* axios
             .get("https://blooming-refuge-31088.herokuapp.com/orders")
             .then((res) => {
                 const allOrders = res.data;
                 setMyOrders(allOrders);
             })
             .catch((err) => console.log(err));
-    }, []);
+    }, []); */
     const deleteOrder = (id) => {
         const proceed = window.confirm("Are you want to delete?");
         if (proceed) {
